@@ -13,14 +13,20 @@ public final class Person {
     // ---------------------------------------------------- Constructor ------------------------------------------------------
     public Person(int _id, String _name, boolean _gender){
         while(!setID(_id++));
-        setName(_name);
+        if (!setName(_name)) {
+            System.out.println("Name used in constructor is invalid.");
+            setName("Person " + personCount);
+        }
         setGender(_gender);
 
         personCount++;
     }
     public Person(int _id, String _name, String _gender){
         while(!setID(_id++));
-        setName(_name);
+        if (!setName(_name)) {
+            System.out.println("Name used in constructor is invalid.");
+            setName("Person " + personCount);
+        }
         if (!setGender(_gender)) {
             System.out.println("Warning: invalid gender for constructor, setting \"male\" as gender.");
             setGender(true);
