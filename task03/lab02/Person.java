@@ -30,7 +30,7 @@ public final class Person {
     }
     // Default constructor
     public Person(){
-        int temp = personCount;
+        int temp = 0;
         while (!setID(temp++));
         setName("Person " + personCount); // Name doesn't have to be unique, but in the case of using a default constructor, an identifier will help
         setGender(true);
@@ -57,6 +57,9 @@ public final class Person {
         if (occupiedID.contains(_id)) return false;
         
         id = _id;
+
+        System.out.println("Setting " + _id + " as ID");
+
         occupiedID.add(_id);
         return true;
     }
