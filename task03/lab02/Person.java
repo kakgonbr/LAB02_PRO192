@@ -5,7 +5,7 @@ import misc.Utils;
 
 public final class Person {
     // --------------------------------------------------------- Fields ------------------------------------------------------
-    private int id; // ID can be negative
+    private int id = -1; // ID can be negative
     private String name;
     private boolean gender;
     private static int personCount = 0;
@@ -109,7 +109,7 @@ public final class Person {
     // Printing info
     public void printInfo(){
     System.out.println("\n"
-                        + "-".repeat(40)
+                        + "-".repeat(17 + name.length())
                         + "\n| ID" + " ".repeat(id == 0 ? 0 : (int)(Math.log10(id)))
                         + "| Name" + " ".repeat(name.length() > 3? name.length() -3 : 0)
                         + "| Gender |");

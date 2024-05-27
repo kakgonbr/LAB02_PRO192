@@ -110,7 +110,7 @@ public final class Person {
     // Printing info
     public void printInfo(){
     System.out.println("\n"
-                        + "-".repeat(40)
+                        + "-".repeat(17 + name.length())
                         + "\n| ID" + " ".repeat(id == 0 ? 0 : (int)(Math.log10(id)))
                         + "| Name" + " ".repeat(name.length() > 3? name.length() -3 : 0)
                         + "| Gender |");

@@ -26,7 +26,7 @@ public class Test {
     // Printing info
     public static void printInfo(Person person){
     System.out.println("\n"
-                        + "-".repeat(40)
+                        + "-".repeat(17 + person.getName().length())
                         + "\n| ID" + " ".repeat(person.getID() == 0 ? 0 : (int)(Math.log10(person.getID())))
                         + "| Name" + " ".repeat(person.getName().length() > 3? person.getName().length() -3 : 0)
                         + "| Gender |");

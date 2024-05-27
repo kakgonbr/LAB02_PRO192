@@ -1,7 +1,7 @@
 package task04.lab02;
 
 import java.util.ArrayList;
-
+import task03.lab02.Person;
 import misc.Utils;
 
 public class Test {
@@ -55,7 +55,7 @@ public class Test {
         double totalWeight = .0d;
 
         for (int i = words.length - 1; i >= 0; i--){
-            totalWeight += (words[i].toLowerCase().codePointAt(0) - 97) * wordWeight;
+            totalWeight += (words[i].toUpperCase().codePointAt(0) - 48) * wordWeight;
             wordWeight /= 100;
         }
 

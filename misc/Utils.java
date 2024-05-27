@@ -3,8 +3,6 @@
 
 package misc;
 
-import java.io.Closeable;
-
 public class Utils {
     public enum validations {
         vInt,
